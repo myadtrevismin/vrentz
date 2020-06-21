@@ -1,0 +1,21 @@
+<mat-card class="listcard">
+  <mat-card-content>
+        <div class="card rentalcard" *ngFor='let rent of listings'>
+            <div class="row no-gutters">
+              <div class="col-md-2">       
+                <img [src]="rent.image" class="img-thumbnail" width="180px" height="180px" alt="...">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                    <h2 class="card-title text-dark">{{rent.address.street1}}</h2>
+                    <h4 class="card-subtitle text-muted">{{rent.address.street2}}</h4>
+                    <p class="card-text text-dark">1 Bed | 1 Bath | 650sqft</p>
+                    <p class="card-text text-dark">Beautiful building with spatious balcony surrounded by green fields and play area.</p>
+                    <a href="#" class="card-link">{{rent.price | currency}}</a>
+                    <a href="#" class="card-link float-right">Available July 2, 2020</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+$break-small: 320px;
+$break-large: 1200px;
+$break-medium: 740px;
+
+.rentalcard{
+  margin: 0.25rem;
+    @media screen and (min-width: $break-medium) {
+        margin-left: 5rem;
+        margin-right: 5rem;
+      }  
+}

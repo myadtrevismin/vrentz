@@ -1,0 +1,70 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0px;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #359129;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #359129;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 200px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 204px;
+  background-image: url('~/assets/images/rental1.jpg');
+  background-size: cover;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.list-horizontal{
+  width: 100%;
+  div{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0.5rem;
+    border: thick;
+    border-radius: 0.5rem;
+    border-color: red($color: #000000);
+    min-width: 80px;
+  }
+}
+
+mat-button-toggle-group {
+  margin-left: 12px;
+}

@@ -1,0 +1,54 @@
+<mat-sidenav-container class="container-side">
+    <mat-sidenav class="sidenavbar" #sidedrawer fixedInViewPort="false">
+        <mat-toolbar color="primary">
+            {{title}}
+        </mat-toolbar>
+        <mat-nav-list>
+            <mat-list-item role="listitem" [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="'/accounts'"> Home </a>
+            </mat-list-item>
+            <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                <a [routerLink]="'/accounts'"> Rentals </a>
+            </mat-list-item>
+            <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                <a [routerLink]="'/accounts'"> Contact </a>
+            </mat-list-item>
+            <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                <a [routerLink]="'/accounts'"> About </a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <div>
+                <a routerLink="/home"><span class="title-label">{{title}}</span></a>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="end" fxHide.gt-xs>
+                <button mat-icon-button (click)="sidedrawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+                <ul fxLayout fxLayoutGap="5px" class="navigation-items">
+                    <mat-nav-list role="list" fxLayout="row">
+                        <mat-list-item  role="listitem" [routerLinkActive]="['link-active']"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="'/accounts'"> Home </a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                            <a [routerLink]="'/accounts'"> Rentals </a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                            <a [routerLink]="'/accounts'"> Contact </a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" [routerLinkActive]="['link-active']">
+                            <a [routerLink]="'/accounts'"> About </a>
+                        </mat-list-item>
+                    </mat-nav-list>
+                </ul>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
